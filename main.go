@@ -15,7 +15,7 @@ func main() {
 	r := gin.Default()
 
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:8081"}
+  config.AllowOrigins = []string{"https://play-visket.now.sh"}
 	r.Use(cors.New(config))
 
 	r.POST("/", handler.PostCode)
