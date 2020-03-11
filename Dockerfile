@@ -17,7 +17,8 @@ ENV GIN_MODE release
 
 RUN git clone https://github.com/visket-lang/visket ./visket \
   && cd ./visket && make && cd .. \
-  && cp ./visket/bin/visket ./static/ 
+  && cp ./visket/bin/visket ./static/ \
+  && cp ./visket/lib/std.sl ./sandbox/src/
 
 # compile playground
 
